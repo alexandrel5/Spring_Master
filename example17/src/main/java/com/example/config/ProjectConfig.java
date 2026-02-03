@@ -2,6 +2,7 @@ package com.example.config;
 
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
 
 /*
 Spring @Configuration annotation is part of spring core framework.
@@ -11,8 +12,9 @@ methods. So Spring container can process the class and generate Spring Beans to 
 
 
 @Configuration
-@ComponentScan(basePackages = {"com.example.implementation", "com.example.services"})
-@ComponentScan(basePackageClasses = {com.example.beans.Vehicle.class, com.example.beans.Vehicle.class})
+@ComponentScan(basePackages = {"com.example.implementation", "com.example.services", "com.example.aspects"})
+//@ComponentScan(basePackageClasses = {com.example.beans.Vehicle.class, com.example.beans.Vehicle.class})
+@EnableAspectJAutoProxy
 public class ProjectConfig {
 
 }
