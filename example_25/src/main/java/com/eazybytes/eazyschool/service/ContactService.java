@@ -6,6 +6,7 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
+import org.springframework.web.context.annotation.ApplicationScope;
 import org.springframework.web.context.annotation.RequestScope;
 import org.springframework.web.context.annotation.SessionScope;
 
@@ -13,6 +14,7 @@ import org.springframework.web.context.annotation.SessionScope;
 @Service
 //@RequestScope
 //@SessionScope
+@ApplicationScope
 public class ContactService {
 
     //private static Logger log = LoggerFactory.getLogger(ContactController.class);
