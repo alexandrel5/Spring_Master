@@ -7,12 +7,12 @@ import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.web.context.annotation.RequestScope;
+import org.springframework.web.context.annotation.SessionScope;
 
 @Slf4j
 @Service
-@RequestScope
-@Setter
-@Getter
+//@RequestScope
+//@SessionScope
 public class ContactService {
 
     //private static Logger log = LoggerFactory.getLogger(ContactController.class);
@@ -34,5 +34,13 @@ public class ContactService {
         //Todo - Need to persist the data into the DB table
         log.info(contact.toString());
         return isSaved;
+    }
+
+    public int getCounter() {
+        return counter;
+    }
+
+    public void setCounter(int counter) {
+        this.counter = counter;
     }
 }
